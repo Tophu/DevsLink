@@ -1,0 +1,23 @@
+// Backgrounds
+.bg {
+  &-primary {
+    @include set-background($primary-colour);
+  }
+  &-light {
+    @include set-background($light-colour);
+    border: #ccc 1px solid;
+  }
+  &-dark {
+    @include set-background($dark-colour);
+  }
+  &-success {
+    @include set-background($success-colour);
+  }
+  &-danger {
+    @include set-background($danger-colour);
+  }
+  &-white {
+    @include set-background(#fff);
+    border: #ccc 1px solid;
+  }
+}
