@@ -1,3 +1,5 @@
+// CSS Variables & Logic goes in here.
+// Sass control directives provide flow and logic using mixins and functions similar to JavaScript.
 $primary-colour: #63c7bd;
 $dark-colour: #4f9b8d;
 $light-colour: #ecf4f3;
@@ -6,6 +8,7 @@ $success-colour: #5affad;
 $max-width: 1100px;
 
 // Set text colour based on background
+// Like using JavaScript functions and methods, use @ before them to work in SCSS 
 @function set-text-colour($colour) {
   @if(lightness($colour) > 50) {
     @return #333;
@@ -19,4 +22,34 @@ $max-width: 1100px;
 @mixin set-background($colour) {
     background-color: $colour;
     color: set-text-colour($colour);
+}
+
+// Margin & Padding
+$spaceamounts: (1,2,3,4,5);
+// Declaring an array with 5 elements
+
+@each $space in $spaceamounts {
+  // Like looping in JavaScript spaceAmounts.forEach(function(space) { };
+  // OR spaceAmounts.forEach((space) => { });
+
+  // All around Margin
+  .m-#{$space} {
+    margin: #{$space}rem;
+  }
+  // Class with variable using what looks similar to template literals in JavaScript, but with '#' instead of '$' like Ruby string interpolation. This is because SCSS declare variables with a '$' & ':' as the operator.
+
+  // Vertical Margin
+  .my-#{$space} {
+    margin: #{$space}rem 0;
+  }
+
+    // All around Padding
+    .p-#{$space} {
+      padding: #{$space}rem;
+    }
+  
+    // Vertical Padding
+    .py-#{$space} {
+      padding: #{$space}rem 0;
+    }
 }
