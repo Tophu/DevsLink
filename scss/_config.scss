@@ -10,7 +10,7 @@ $max-width: 1100px;
 // Set text colour based on background
 // Like using JavaScript functions and methods, use @ before them to work in SCSS 
 @function set-text-colour($colour) {
-  @if(lightness($colour) > 50) {
+  @if(lightness($colour) > 70) {
     @return #333;
   } @else {
     @return #fff;
@@ -19,6 +19,7 @@ $max-width: 1100px;
 
 // Set background & text colour using Mixin
 // Mixin is like a function which doesn't return anything, but outputs the argument given to it.
+// They are reusable like an instance method, to use them in another file use @include name-of-mixin($variable);
 @mixin set-background($colour) {
     background-color: $colour;
     color: set-text-colour($colour);
