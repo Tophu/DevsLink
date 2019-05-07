@@ -76,7 +76,7 @@ img {
   }
 }
 
-// Profiles page
+// Profiles(#index) page
 .profile {
   display: grid;
   grid-template-columns: 2fr 4fr 2fr;
@@ -85,4 +85,11 @@ img {
   padding: 1rem;
   line-height: 1.8;
   margin-bottom: 1rem;
+}
+
+// Profile(#show) Page
+.profile-grid {
+  display: grid;
+  grid-template-areas: 'top top' 'about about' 'exp edu' 'github github';
+  grid-gap: 1rem;
 }
