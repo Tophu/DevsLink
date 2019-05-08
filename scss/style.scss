@@ -182,3 +182,6 @@ img {
     width: 150px;
   }
 }
+
+// Mobile SCSS where the media queries go
+@import 'mobile';
